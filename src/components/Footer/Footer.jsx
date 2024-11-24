@@ -1,13 +1,7 @@
 import React from "react";
 import footerLogo from "../../assets/logo.png";
 import Banner from "../../assets/website/footer-pattern.jpg";
-import {
-  FaFacebook,
-  FaInstagram,
-  FaLinkedin,
-  FaLocationArrow,
-  FaMobileAlt,
-} from "react-icons/fa";
+import { FaLocationArrow, FaMobileAlt } from "react-icons/fa";
 
 const BannerImg = {
   backgroundImage: `url(${Banner})`,
@@ -20,20 +14,20 @@ const BannerImg = {
 
 const FooterLinks = [
   {
-    title: "Home",
-    link: "/#",
+    title: "Ana Sayfa",
+    link: "/",
   },
   {
-    title: "About",
-    link: "/#about",
+    title: "Hakkımızda",
+    link: "/about",
   },
   {
-    title: "Contact",
-    link: "/#contact",
+    title: "Hizmetler",
+    link: "/services",
   },
   {
-    title: "Blog",
-    link: "/#blog",
+    title: "İletişim",
+    link: "/contact",
   },
 ];
 
@@ -46,45 +40,24 @@ const Footer = () => {
           <div className="py-8 px-4">
             <h1 className="sm:text-3xl text-xl font-bold sm:text-left text-justify mb-3 flex items-center gap-3">
               <img src={footerLogo} alt="" className="max-w-[50px]" />
-              Shopsy
+              Güvenfix
             </h1>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum in
-              beatae ea recusandae blanditiis veritatis.
-            </p>
+            <p>Uydu çanak anten teknik servis.</p>
           </div>
 
           {/* Footer Links */}
           <div className="grid grid-cols-2 sm:grid-cols-3 col-span-2 md:pl-10">
             <div>
               <div className="py-8 px-4">
-                <h1 className="sm:text-xl text-xl font-bold sm:text-left text-justify mb-3">
-                  Important Links
-                </h1>
                 <ul className="flex flex-col gap-3">
                   {FooterLinks.map((link) => (
                     <li
                       className="cursor-pointer hover:text-primary hover:translate-x-1 duration-300 text-gray-200"
-                      key={link.title}
+                      key={link.id}
                     >
-                      <span>{link.title}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-            <div>
-              <div className="py-8 px-4">
-                <h1 className="sm:text-xl text-xl font-bold sm:text-left text-justify mb-3">
-                  Links
-                </h1>
-                <ul className="flex flex-col gap-3">
-                  {FooterLinks.map((link) => (
-                    <li
-                      className="cursor-pointer hover:text-primary hover:translate-x-1 duration-300 text-gray-200"
-                      key={link.title}
-                    >
-                      <span>{link.title}</span>
+                      <a href={link.link}>
+                        <span>{link.title}</span>
+                      </a>
                     </li>
                   ))}
                 </ul>
@@ -92,27 +65,22 @@ const Footer = () => {
             </div>
 
             {/* social links */}
-
             <div>
-              <div className="flex items-center gap-3 mt-6">
-                <a href="#">
-                  <FaInstagram className="text-3xl" />
-                </a>
-                <a href="#">
-                  <FaFacebook className="text-3xl" />
-                </a>
-                <a href="#">
-                  <FaLinkedin className="text-3xl" />
-                </a>
-              </div>
               <div className="mt-6">
                 <div className="flex items-center gap-3">
-                  <FaLocationArrow />
-                  <p>Noida, Uttar Pradesh</p>
+                  <a href="https://www.google.com/maps/place/%C3%87anak+Anten+Yak%C4%B1nlarda+Uydu+Teknik+Servis+g%C3%BCvenfix/@39.9814498,32.8685892,17z/data=!3m1!4b1!4m8!3m7!1s0x14d34da1352e9f2b:0x41fa1f66c9f2eb10!8m2!3d39.9814457!4d32.8711641!9m1!1b1!16s%2Fg%2F11wg6w8g32?entry=ttu&g_ep=EgoyMDI0MTExOS4yIKXMDSoASAFQAw%3D%3D">
+                    <FaLocationArrow />
+                    <p>Güçlükaya, Evrim Sk. no:4 A, 06310 Keçiören/Ankara</p>
+                  </a>
                 </div>
                 <div className="flex items-center gap-3 mt-3">
                   <FaMobileAlt />
-                  <p>+91 123456789</p>
+                  <a
+                    href="tel:+905054428080"
+                    className="hover:text-primary duration-300"
+                  >
+                    0505 442 80 80
+                  </a>
                 </div>
               </div>
             </div>

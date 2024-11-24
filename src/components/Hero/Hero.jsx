@@ -1,44 +1,44 @@
 import React from "react";
-import Image1 from "../../assets/hero/women.png";
-import Image2 from "../../assets/hero/shopping.png";
-import Image3 from "../../assets/hero/sale.png";
+import Image1 from "../../assets/hero/uydu.png";
+import Image2 from "../../assets/hero/kamera.png";
+import Image3 from "../../assets/hero/elektrik.png";
 import Slider from "react-slick";
 
 const ImageList = [
   {
     id: 1,
     img: Image1,
-    title: "Upto 50% off on all Men's Wear",
+    title: "Uydu ve Çanak Anten Sistemleri",
     description:
-      "lorem His Life will forever be Changed dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Merkezi uydu sistemleriyle çanak kirliliğinin önüne geçiyoruz.",
   },
   {
     id: 2,
     img: Image2,
-    title: "30% off on all Women's Wear",
+    title: "Güvenlik Kamera Sistemleri",
     description:
-      "Who's there lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Denetim, kontrol, iç, dış ve çevre güvenliğinin sağlanması için kullanılan görüntüleme sistemleri kuruyoruz.",
   },
   {
     id: 3,
     img: Image3,
-    title: "70% off on all Products Sale",
+    title: "Elektrik Bakım Onarım",
     description:
-      "consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Elektronik sorun ve arızalarda tamir bakım ve onarım işlemleri yapıyoruz.",
   },
 ];
 
 const Hero = ({ handleOrderPopup }) => {
   var settings = {
     dots: false,
-    arrows: false,
+    arrows: true,
     infinite: true,
     speed: 800,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 4000,
+    autoplaySpeed: 6000,
     cssEase: "ease-in-out",
-    pauseOnHover: false,
+    pauseOnHover: true,
     pauseOnFocus: true,
   };
 
@@ -79,7 +79,7 @@ const Hero = ({ handleOrderPopup }) => {
                       onClick={handleOrderPopup}
                       className="bg-gradient-to-r from-primary to-secondary hover:scale-105 duration-200 text-white py-2 px-4 rounded-full"
                     >
-                      Order Now
+                      Teklif Al
                     </button>
                   </div>
                 </div>
