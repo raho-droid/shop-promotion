@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Logo from "../../assets/logo.png";
+import Logo from "../../assets/logo.jpeg";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
 import DarkMode from "./DarkMode";
 import { Link } from "react-router-dom";
@@ -41,7 +41,7 @@ const Navbar = () => {
         <div className="container flex justify-between items-center">
           <div>
             <Link to="/" className="font-bold text-2xl sm:text-3xl flex gap-2">
-              <img src={Logo} alt="Logo" className="w-10" />
+              <img src={Logo} alt="Logo" className="w-10 h-10 rounded-full" />
               Güvenfix
             </Link>
           </div>
