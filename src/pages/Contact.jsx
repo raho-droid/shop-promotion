@@ -2,8 +2,8 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <div className="container mx-auto py-10">
-      <h1 className="text-3xl font-bold mb-5">İletişim</h1>
+    <div className="container mx-auto py-10 w-full text-center">
+      <h1 className="text-4xl font-bold text-primary mb-4">İletişim</h1>
       <p>Bize aşağıdaki bilgileri kullanarak ulaşabilirsiniz:</p>
       <ul>
         <li>Telefon: +905054428080</li>

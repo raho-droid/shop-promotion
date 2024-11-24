@@ -1,23 +1,19 @@
 import React from "react";
-import About from "./pages/about";
-import Contact from "./pages/contact";
-import Services from "./pages/services";
-import Navbar from "./components/Navbar/Navbar";
-import Hero from "./components/Hero/Hero";
-import Products from "./components/Products/Products";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Banner from "./components/Banner/Banner";
-import Testimonials from "./components/Testimonials/Testimonials";
+import MainPage from "./pages/MainPage";
+import About from "./pages/about";
+import Services from "./pages/Services";
+import Contact from "./pages/Contact";
+import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import Popup from "./components/Popup/Popup";
 
 const App = () => {
   const [orderPopup, setOrderPopup] = React.useState(false);
 
-  const handleOrderPopup = () => {
-    setOrderPopup(!orderPopup);
-  };
   React.useEffect(() => {
     AOS.init({
       offset: 100,
@@ -29,15 +25,17 @@ const App = () => {
   }, []);
 
   return (
-    <div className="bg-white dark:bg-gray-900 dark:text-white duration-200">
+    <Router>
       <Navbar />
-      <Hero handleOrderPopup={handleOrderPopup} />
-      <Products />
-      <Banner />
-      <Testimonials />
+      <Routes>
+        <Route path="/" element={<MainPage />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/services" element={<Services />} />
+      </Routes>
       <Footer />
       <Popup orderPopup={orderPopup} setOrderPopup={setOrderPopup} />
-    </div>
+    </Router>
   );
 };
 

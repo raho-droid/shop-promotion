@@ -49,9 +49,12 @@ const Services = () => {
       <div className="container mx-auto px-4">
         {/* Page Header */}
         <div className="text-center mb-10">
-          <h1 className="text-4xl font-bold text-primary mb-4">Hizmetlerimiz</h1>
+          <h1 className="text-4xl font-bold text-primary mb-4">
+            Hizmetlerimiz
+          </h1>
           <p className="text-gray-600 text-lg">
-            Güvenilir, profesyonel ve hızlı uydu hizmetleri sunuyoruz. İhtiyaçlarınıza en uygun çözümleri sağlamak için buradayız.
+            Güvenilir, profesyonel ve hızlı uydu hizmetleri sunuyoruz.
+            İhtiyaçlarınıza en uygun çözümleri sağlamak için buradayız.
           </p>
         </div>
 

@@ -103,15 +103,16 @@ const Testimonials = () => {
             Google Maps Yorumları
           </h1>
           <p data-aos="fade-up" className="text-xs text-gray-400">
-            Hizmet verdiğimiz müşterilerimizin hakkımızda bizlere sağladığı geri dönüşler
+            Hizmet verdiğimiz müşterilerimizin hakkımızda bizlere sağladığı geri
+            dönüşler
           </p>
         </div>
 
         {/* Testimonial cards */}
         <div data-aos="zoom-in">
           <Slider {...settings}>
-            {TestimonialData.map((data) => (
-              <div className="my-6">
+            {TestimonialData.map((data, index) => (
+              <div className="my-6" key={index}>
                 <div
                   key={data.id}
                   className="flex flex-col gap-4 shadow-lg py-8 px-6 mx-4 rounded-xl dark:bg-gray-800 bg-primary/10 relative"

@@ -3,6 +3,7 @@ import Image1 from "../../assets/hero/uydu.png";
 import Image2 from "../../assets/hero/kamera.png";
 import Image3 from "../../assets/hero/elektrik.png";
 import Slider from "react-slick";
+import { Link } from "react-router-dom";
 
 const ImageList = [
   {
@@ -49,8 +50,8 @@ const Hero = ({ handleOrderPopup }) => {
       {/* hero section */}
       <div className="container pb-8 sm:pb-0">
         <Slider {...settings}>
-          {ImageList.map((data) => (
-            <div>
+          {ImageList.map((data, index) => (
+            <div key={index}>
               <div className="grid grid-cols-1 sm:grid-cols-2">
                 {/* text content section */}
                 <div className="flex flex-col justify-center gap-4 pt-12 sm:pt-0 text-center sm:text-left order-2 sm:order-1 relative z-10">
@@ -75,12 +76,14 @@ const Hero = ({ handleOrderPopup }) => {
                     data-aos-duration="500"
                     data-aos-delay="300"
                   >
-                    <button
-                      onClick={handleOrderPopup}
-                      className="bg-gradient-to-r from-primary to-secondary hover:scale-105 duration-200 text-white py-2 px-4 rounded-full"
-                    >
-                      Teklif Al
-                    </button>
+                    <Link to="/contact">
+                      <button
+                        onClick={handleOrderPopup}
+                        className="bg-gradient-to-r from-primary to-secondary hover:scale-105 duration-200 text-white py-2 px-4 rounded-full"
+                      >
+                        Bize Ulaşın
+                      </button>
+                    </Link>
                   </div>
                 </div>
                 {/* image section */}
