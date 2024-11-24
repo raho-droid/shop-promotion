@@ -84,6 +84,12 @@ const Footer = () => {
                 </div>
               </div>
             </div>
+            {/* sign */}
+            <div>
+              <div className="py-8 px-4">
+                <p>© 2024 Kilic & Alim. All rights reserved.</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
