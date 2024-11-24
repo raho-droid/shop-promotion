@@ -22,7 +22,7 @@ const Menu = [
   },
   {
     id: 4,
-    name: "iletişim",
+    name: "İletişim",
     link: "/contact",
   },
 ];

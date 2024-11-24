@@ -27,7 +27,7 @@ const App = () => {
   return (
     <Router>
       <Navbar />
-      <Routes>
+      <Routes basename="/">
         <Route path="/" element={<MainPage />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
