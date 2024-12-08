@@ -9,7 +9,7 @@ const ImageList = [
   {
     id: 1,
     img: Image1,
-    title: "Çanak Anten ve Uydu Sistemleri",
+    title: "Çanak Anten ve Merkezi Uydu Sistemleri",
     description: "Kurulum ve teknik servis hizmetleri sunuyoruz.",
   },
   {

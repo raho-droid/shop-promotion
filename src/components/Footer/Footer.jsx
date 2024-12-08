@@ -1,5 +1,5 @@
 import React from "react";
-import footerLogo from "../../assets/logo.jpeg";
+import footerLogo from "../../assets/logo.png";
 import Banner from "../../assets/website/footer-pattern.jpg";
 import { FaLocationArrow, FaMobileAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
@@ -45,7 +45,10 @@ const Footer = () => {
                 alt=""
                 className="max-w-[50px] rounded-full"
               />
-              güvenfix
+              <p>
+                <span className="text-white">güven</span>
+                <span className="text-red-700">fix</span>
+              </p>
             </h1>
             <p>Çanak anten uydu teknik servis.</p>
           </div>

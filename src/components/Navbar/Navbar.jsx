@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Logo from "../../assets/logo.jpeg";
+import Logo from "../../assets/logo.png";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
 import DarkMode from "./DarkMode";
 import { Link } from "react-router-dom";
@@ -24,7 +24,10 @@ const Navbar = () => {
           className="flex items-center gap-3 text-2xl font-bold hover:opacity-80"
         >
           <img src={Logo} alt="Logo" className="w-12 h-12 rounded-full" />
-          güvenfix
+          <p>
+            <span className="text-black">güven</span>
+            <span className="text-red-700">fix</span>
+          </p>
         </Link>
 
         <div className="hidden sm:flex items-center gap-4">
