@@ -4,39 +4,63 @@ import Slider from "react-slick";
 const TestimonialData = [
   {
     id: 1,
-    name: "Victor",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque reiciendis inventore iste ratione ex alias quis magni at optio",
+    name: "Kayhan Yılmaz",
+    text: "Sitemizin merkezi sistem problemini çözdüler vermiş oldukları servisten dolayı teşekür ederiz.",
     img: "https://picsum.photos/101/101",
   },
   {
     id: 2,
-    name: "Satya Nadella",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque reiciendis inventore iste ratione ex alias quis magni at optio",
+    name: "Hasan Polat",
+    text: "Evimizin çanak anten kurulumunu yaptırdık. Kendilerinden çok memnun kaldım temiz hızlı ve kaliteli işçilik.",
     img: "https://picsum.photos/102/102",
   },
   {
     id: 3,
-    name: "Virat Kohli",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque reiciendis inventore iste ratione ex alias quis magni at optio",
+    name: "Müslim Çimen",
+    text: "Son derece deneyimli ve işinin ehli insanlar aldıkları parayı sonuna kadar hakediyorlar Enver usta işin hakkını veriyor tavsiye ederim.",
     img: "https://picsum.photos/104/104",
   },
   {
     id: 5,
-    name: "Sachin Tendulkar",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque reiciendis inventore iste ratione ex alias quis magni at optio",
+    name: "Kapadokya City",
+    text: "Firmamızın kamera sistemini yaptırdık görüntüsünden ve işçiliğinden çok  memnun kaldık tanıdıklarıma tavsiye edeceğim teşekkürler güvenfix",
     img: "https://picsum.photos/103/103",
+  },
+  {
+    id: 6,
+    name: "Semih Tumsek",
+    text: "Çanak anten kurulumu yaptırdım işçilik ve kullanılan malzeme çok kaliteli tüm kanalları sıkıntısız izleyebiliyorum tavsiye ederim",
+    img: "https://picsum.photos/105/105",
+  },
+  {
+    id: 7,
+    name: "Tuğçe Koyuncu",
+    text: "Kaliteli işçilik ve kullanılan malzemeler çok kaliteliydi. Teşekkürler.",
+    img: "https://picsum.photos/106/106",
+  },
+  {
+    id: 8,
+    name: "ogulcan sipahioglu",
+    text: "Dürüst esnaf evdeki çoğu işimizi çözdü teşekkür ederim",
+    img: "https://picsum.photos/107/107",
+  },
+  {
+    id: 9,
+    name: "Ümit Kargı",
+    text: "Gerçekten işinin uzmanı, son derece bilgili ve çok çabuk. Çok memnunum ve herkese tavsiye ederim.",
+    img: "https://picsum.photos/108/108",
   },
 ];
 
 const Testimonials = () => {
   var settings = {
     dots: true,
-    arrows: false,
+    arrows: true,
     infinite: true,
-    speed: 500,
+    speed: 1000,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 4000,
     cssEase: "linear",
     pauseOnHover: true,
     pauseOnFocus: true,
@@ -73,14 +97,13 @@ const Testimonials = () => {
         {/* header section */}
         <div className="text-center mb-10 max-w-[600px] mx-auto">
           <p data-aos="fade-up" className="text-sm text-primary">
-            What our customers are saying
+            Müşterilerimiz ne diyor
           </p>
           <h1 data-aos="fade-up" className="text-3xl font-bold">
-            Testimonials
+            Google Maps Yorumları
           </h1>
           <p data-aos="fade-up" className="text-xs text-gray-400">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit
-            asperiores modi Sit asperiores modi
+            Hizmet verdiğimiz müşterilerimizin hakkımızda bizlere sağladığı geri dönüşler
           </p>
         </div>
 
