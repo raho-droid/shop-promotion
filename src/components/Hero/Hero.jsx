@@ -9,9 +9,8 @@ const ImageList = [
   {
     id: 1,
     img: Image1,
-    title: "Uydu ve Çanak Anten Sistemleri",
-    description:
-      "Merkezi uydu sistemleriyle çanak kirliliğinin önüne geçiyoruz.",
+    title: "Çanak Anten ve Uydu Sistemleri",
+    description: "Kurulum ve teknik servis hizmetleri sunuyoruz.",
   },
   {
     id: 2,
@@ -30,9 +29,9 @@ const ImageList = [
 ];
 
 const Hero = ({ handleOrderPopup }) => {
-  var settings = {
-    dots: false,
-    arrows: true,
+  const settings = {
+    dots: true,
+    arrows: false,
     infinite: true,
     speed: 800,
     slidesToScroll: 1,
@@ -40,65 +39,45 @@ const Hero = ({ handleOrderPopup }) => {
     autoplaySpeed: 6000,
     cssEase: "ease-in-out",
     pauseOnHover: true,
-    pauseOnFocus: true,
   };
 
   return (
-    <div className="relative overflow-hidden min-h-[550px] sm:min-h-[650px] bg-gray-100 flex justify-center items-center dark:bg-gray-950 dark:text-white duration-200 ">
-      {/* background pattern */}
-      <div className="h-[700px] w-[700px] bg-primary/40 absolute -top-1/2 right-0 rounded-3xl rotate-45 -z[8]"></div>
-      {/* hero section */}
-      <div className="container pb-8 sm:pb-0">
+    <div className="relative overflow-hidden min-h-[80vh] bg-gray-100 dark:bg-gray-950 dark:text-white duration-300 pt-20 sm:pt-24 lg:pt-28">
+      {/* Background Pattern */}
+      <div className="absolute -top-1/2 right-0 w-[900px] h-[900px] bg-primary/20 rounded-full blur-[150px] -z-10"></div>
+
+      <div className="container mx-auto py-16 px-6 sm:px-12">
         <Slider {...settings}>
-          {ImageList.map((data, index) => (
-            <div key={index}>
-              <div className="grid grid-cols-1 sm:grid-cols-2">
-                {/* text content section */}
-                <div className="flex flex-col justify-center gap-4 pt-12 sm:pt-0 text-center sm:text-left order-2 sm:order-1 relative z-10">
-                  <h1
-                    data-aos="zoom-out"
-                    data-aos-duration="500"
-                    data-aos-once="true"
-                    className="text-5xl sm:text-6xl lg:text-7xl font-bold"
-                  >
+          {ImageList.map((data) => (
+            <div key={data.id}>
+              <div className="grid grid-cols-1 sm:grid-cols-2 items-center gap-8">
+                {/* Text Content */}
+                <div className="flex flex-col gap-6 text-center sm:text-left order-2 sm:order-1">
+                  <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
                     {data.title}
                   </h1>
-                  <p
-                    data-aos="fade-up"
-                    data-aos-duration="500"
-                    data-aos-delay="100"
-                    className="text-sm"
-                  >
+                  <p className="text-base sm:text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
                     {data.description}
                   </p>
-                  <div
-                    data-aos="fade-up"
-                    data-aos-duration="500"
-                    data-aos-delay="300"
-                  >
+                  <div>
                     <Link to="/contact">
                       <button
                         onClick={handleOrderPopup}
-                        className="bg-gradient-to-r from-primary to-secondary hover:scale-105 duration-200 text-white py-2 px-4 rounded-full"
+                        className="bg-gradient-to-r from-primary to-secondary hover:scale-10 hover:shadow-lg transition-transform text-white py-3 px-6 rounded-full text-lg font-semibold"
                       >
                         Bize Ulaşın
                       </button>
                     </Link>
                   </div>
                 </div>
-                {/* image section */}
+
+                {/* Image Section */}
                 <div className="order-1 sm:order-2">
-                  <div
-                    data-aos="zoom-in"
-                    data-aos-once="true"
-                    className="relative z-10"
-                  >
-                    <img
-                      src={data.img}
-                      alt=""
-                      className="w-[300px] h-[300px] sm:h-[450px] sm:w-[450px] sm:scale-105 lg:scale-120 object-contain mx-auto"
-                    />
-                  </div>
+                  <img
+                    src={data.img}
+                    alt={data.title}
+                    className="w-[300px] sm:w-[450px] lg:w-[550px] mx-auto object-contain animate-fadeIn"
+                  />
                 </div>
               </div>
             </div>

@@ -45,9 +45,9 @@ const Footer = () => {
                 alt=""
                 className="max-w-[50px] rounded-full"
               />
-              Güvenfix
+              güvenfix
             </h1>
-            <p>Uydu çanak anten teknik servis.</p>
+            <p>Çanak anten uydu teknik servis.</p>
           </div>
 
           {/* Footer Links */}
