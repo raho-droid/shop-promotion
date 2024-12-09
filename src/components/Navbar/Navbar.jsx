@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Logo from "../../assets/logo.png";
+import Logo from "../../assets/logo.jpeg";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
 import DarkMode from "./DarkMode";
 import { Link } from "react-router-dom";
@@ -26,7 +26,9 @@ const Navbar = () => {
           <img src={Logo} alt="Logo" className="w-12 h-12 rounded-full" />
           <p>
             <span className="text-black">güven</span>
-            <span className="text-red-700">fix</span>
+            <span className="text-red-700">
+              f<span style={{ position: "relative", left: "0.5px" }}>i</span>x
+            </span>
           </p>
         </Link>
 
