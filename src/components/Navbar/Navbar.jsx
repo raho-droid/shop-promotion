@@ -27,7 +27,7 @@ const Navbar = () => {
           <p>
             <span className="text-black">güven</span>
             <span className="text-red-700">
-              f<span style={{ position: "relative", left: "0.5px" }}>i</span>x
+              f<span style={{ position: "relative", left: "1px" }}>i</span>x
             </span>
           </p>
         </Link>
